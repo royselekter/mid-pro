@@ -1,0 +1,15 @@
+ubuntu@ip-192-168-10-52:~$ cat /etc/consul.d/http.json
+{
+ "service": {
+   "name": "http",
+   "tags": ["http"],
+   "port": 30036,
+   "check": {
+        "id": "http-health",
+       "name": "http TCP health",
+       "tcp": "192.168.10.52:30036",
+       "interval": "10s",
+        "timeout": "1s"
+       }
+   }
+}

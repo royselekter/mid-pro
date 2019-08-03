@@ -1,0 +1,35 @@
+1. install jenkins
+
+
+2. new pipeline job
+
+script pipeline
+github jenkins file (branch master)
+
+
+3. docker hub
+add credentials
+
+
+
+sudo apt install default-jre default-jdk -y
+
+sudo apt-get update -y
+
+
+echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
+
+echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
+
+sudo apt-get install oracle-java8-installer -q -y
+
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+
+
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/> /etc/apt/sources.list.d/jenkins.list'
+
+
+sudo apt-get update -y
+sudo apt-get install jenkins -y
+
+Ortal
